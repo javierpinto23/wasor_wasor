@@ -1,0 +1,6 @@
+train: /Users/pintojav/Desktop/wasor_wasor/wasor_wasor/data/images/train
+val: /Users/pintojav/Desktop/wasor_wasor/wasor_wasor/data/images/val
+test: /Users/pintojav/Desktop/wasor_wasor/wasor_wasor/data/images/test
+
+nc: 7
+names: ['Organic', 'Batteries', 'Glass', 'Metal', 'Paper', 'Plastic', 'Biological']

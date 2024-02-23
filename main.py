@@ -1,16 +1,27 @@
-# This is a sample Python script.
+from ultralytics import YOLO
+import cv2
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# Read the model
+model = YOLO("/Users/pintojav/Desktop/wasor_wasor/wasor_wasor/wasor_wasor/runs/weights/best.pt")
+# Capture the video
+cap = cv2.VideoCapture(0)
 
+while True:
+    # Read the frames
+    ret, frame = cap.read()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    # Read the results
+    results = model.predict(frame, imgsz = 640)
 
+    # Display the results
+    annotations = results[0].plot()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    # Display the frames and the results video
+    cv2.imshow("WASOR", annotations)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # Close the program
+    if cv2.waitKey(1) == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
