@@ -69,7 +69,7 @@ def Scanning():
                         # ORGANIC
                         if cls == 0:
                             # Draw rectangle
-                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (255,255,0),2)
+                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (0, 128, 0),2)
 
                             # Text
                             text = f'{clasess_name[0]} {int(conf)*100}%'
@@ -77,7 +77,7 @@ def Scanning():
                             dim = sizetext[0]
                             baseline = sizetext[1]
                             cv2.rectangle(frame_show,(x1,y1 -dim[1] - baseline), (x1 + dim[0],y1 + baseline),(0,0,0), cv2.FILLED)
-                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2)
+                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(0, 128, 0),2)
 
                             # Image container
                             Recyling_Containers(ima_organic,ima_organic_txt)
@@ -85,7 +85,7 @@ def Scanning():
                         # BATTERIES
                         if cls == 1:
                             # Draw rectangle
-                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (255,255,0),2)
+                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (128, 128, 0),2)
 
                             # Text
                             text = f'{clasess_name[1]} {int(conf)*100}%'
@@ -93,7 +93,7 @@ def Scanning():
                             dim = sizetext[0]
                             baseline = sizetext[1]
                             cv2.rectangle(frame_show,(x1,y1 -dim[1] - baseline), (x1 + dim[0],y1 + baseline),(0,0,0), cv2.FILLED)
-                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2)
+                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(128, 128, 0),2)
 
                             # Image container
                             Recyling_Containers(ima_batteries, ima_batteries_txt)
@@ -101,7 +101,7 @@ def Scanning():
                         # GLASS
                         if cls == 2:
                             # Draw rectangle
-                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (255,255,0),2)
+                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (0, 255, 255),2)
 
                             # Text
                             text = f'{clasess_name[2]} {int(conf)*100}%'
@@ -109,7 +109,7 @@ def Scanning():
                             dim = sizetext[0]
                             baseline = sizetext[1]
                             cv2.rectangle(frame_show,(x1,y1 -dim[1] - baseline), (x1 + dim[0],y1 + baseline),(0,0,0), cv2.FILLED)
-                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2)
+                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(0, 255, 255),2)
 
                             # Image container
                             Recyling_Containers(ima_glass, ima_glass_txt)
@@ -117,7 +117,7 @@ def Scanning():
                         # METAL
                         if cls == 3:
                             # Draw rectangle
-                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (255,255,0),2)
+                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (128, 0, 0),2)
 
                             # Text
                             text = f'{clasess_name[3]} {int(conf)*100}%'
@@ -125,7 +125,7 @@ def Scanning():
                             dim = sizetext[0]
                             baseline = sizetext[1]
                             cv2.rectangle(frame_show,(x1,y1 -dim[1] - baseline), (x1 + dim[0],y1 + baseline),(0,0,0), cv2.FILLED)
-                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2)
+                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(128, 0, 0),2)
 
                             # Image container
                             Recyling_Containers(ima_metal, ima_metal_txt)
@@ -149,7 +149,7 @@ def Scanning():
                         # PLASTIC
                         if cls == 5:
                             # Draw rectangle
-                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (255,255,0),2)
+                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (255, 0, 0),2)
 
                             # Text
                             text = f'{clasess_name[5]} {int(conf)*100}%'
@@ -157,7 +157,7 @@ def Scanning():
                             dim = sizetext[0]
                             baseline = sizetext[1]
                             cv2.rectangle(frame_show,(x1,y1 -dim[1] - baseline), (x1 + dim[0],y1 + baseline),(0,0,0), cv2.FILLED)
-                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2)
+                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255, 0, 0),2)
 
                             # Image container
                             Recyling_Containers(ima_plastic, ima_plastic_txt)
@@ -165,7 +165,7 @@ def Scanning():
                         # BIOLOGICAL
                         if cls == 6:
                             # Draw rectangle
-                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (255,255,0),2)
+                            cv2.rectangle(frame_show,(x1,y1),(x2,y2), (255, 0, 0),2)
 
                             # Text
                             text = f'{clasess_name[6]} {int(conf)*100}%'
@@ -173,7 +173,7 @@ def Scanning():
                             dim = sizetext[0]
                             baseline = sizetext[1]
                             cv2.rectangle(frame_show,(x1,y1 -dim[1] - baseline), (x1 + dim[0],y1 + baseline),(0,0,0), cv2.FILLED)
-                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2)
+                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255, 0, 0),2)
 
                             # Image container
                             Recyling_Containers(ima_biological, ima_biological_txt)
