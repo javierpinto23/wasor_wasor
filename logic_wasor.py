@@ -44,7 +44,7 @@ def Scanning():
         if ret == True:
 
             # Results
-            results = model(frame, stream=True, verbose=False)
+            results = model(frame, stream=True, verbose=False, max_det=1,conf=0.5)
             for res in results:
                 # Box
                 boxes = res.boxes
@@ -65,7 +65,7 @@ def Scanning():
                     # Confidence
                     conf = math.ceil(box.conf[0])
 
-                    if conf > 0.2:
+                    if conf > 0.6:
                         # ORGANIC
                         if cls == 0:
                             # Draw rectangle
