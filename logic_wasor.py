@@ -208,7 +208,7 @@ def Main_Window():
     background.place(x=0,y=0,relwidth=1,relheight=1)
 
     # Model
-    model = YOLO('/Users/pintojav/Desktop/wasor_wasor/wasor_wasor/wasor_wasor/runs2/weights/best.pt')
+    model = YOLO('/Users/pintojav/Desktop/wasor_wasor/wasor_wasor/wasor_wasor/runs3/weights/best.pt')
 
     # Classes
     clasess_name = ['Organic', 'Batteries', 'Glass', 'Metal', 'Paper', 'Plastic', 'Biological']
