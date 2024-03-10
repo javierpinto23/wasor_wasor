@@ -4,7 +4,7 @@ import cv2
 # Read the model
 model = YOLO("/Users/pintojav/Desktop/wasor_wasor/wasor_wasor/wasor_wasor/runs/weights/best.pt")
 # Capture the video
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("http://192.168.18.16:8080/video")
 
 while True:
     # Read the frames

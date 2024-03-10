@@ -1,7 +1,7 @@
 import torch
 from ultralytics import YOLO
 
-"""if torch.backends.mps.is_available():
+if torch.backends.mps.is_available():
     mps_device = torch.device("mps")
     x = torch.ones(1, device=mps_device)
     print (x)
@@ -31,8 +31,9 @@ else:
     y = x * 2
 
     # Move your model to mps just like any other device
-    model = YOLO("/Users/pintojav/Desktop/wasor_wasor/wasor_wasor/wasor_wasor/runs/weights/best.pt")
+    model = YOLO("/Users/pintojav/Desktop/wasor_wasor/wasor_wasor/wasor_wasor/runs3/weights/best.pt")
     model.to(mps_device)
 
     # Now every call runs on the GPU
     pred = model(x)
+"""

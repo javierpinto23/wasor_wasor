@@ -173,7 +173,7 @@ def Scanning():
                             dim = sizetext[0]
                             baseline = sizetext[1]
                             cv2.rectangle(frame_show,(x1,y1 -dim[1] - baseline), (x1 + dim[0],y1 + baseline),(0,0,0), cv2.FILLED)
-                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(255, 0, 0),2)
+                            cv2.putText(frame_show,text,(x1,y1 - 5), cv2.FONT_HERSHEY_SIMPLEX,1,(242, 0, 249),2)
 
                             # Image container
                             Recyling_Containers(ima_biological, ima_biological_txt)
@@ -211,7 +211,7 @@ def Main_Window():
     model = YOLO('/Users/pintojav/Desktop/wasor_wasor/wasor_wasor/wasor_wasor/runs3/weights/best.pt')
 
     # Classes
-    clasess_name = ['Organic', 'Batteries', 'Glass', 'Metal', 'Paper', 'Plastic', 'Biological']
+    clasess_name = ['Organic', 'E-waste', 'Glass', 'Metal', 'Paper', 'Plastic', 'Biological']
 
 
     # Images classes
@@ -221,21 +221,22 @@ def Main_Window():
     ima_metal = cv2.imread("layout/metal.png")
     ima_paper = cv2.imread("layout/paper.png")
     ima_plastic = cv2.imread("layout/plastic.png")
-    ima_biological = cv2.imread("layout/plastic.png")
+    ima_biological = cv2.imread("layout/biological.png")
 
-    ima_organic_txt = cv2.imread("layout/organic.png")
-    ima_batteries_txt = cv2.imread("layout/batteries.png")
-    ima_glass_txt = cv2.imread("layout/glass.png")
-    ima_metal_txt = cv2.imread("layout/metal.png")
-    ima_paper_txt = cv2.imread("layout/paper.png")
-    ima_plastic_txt = cv2.imread("layout/plastic.png")
-    ima_biological_txt = cv2.imread("layout/plastic.png")
+    ima_organic_txt = cv2.imread("layout/organic_phrase.png")
+    ima_batteries_txt = cv2.imread("layout/e-waste_phrase.png")
+    ima_glass_txt = cv2.imread("layout/glass_phrase.png")
+    ima_metal_txt = cv2.imread("layout/metal_phrase.png")
+    ima_paper_txt = cv2.imread("layout/paper_phrase.png")
+    ima_plastic_txt = cv2.imread("layout/plastic_phrase.png")
+    ima_biological_txt = cv2.imread("layout/biological_phrase.png")
 
     # video label
     label_video = Label(window_main)
     label_video.place(x=320, y=130)
 
     # Cam
+    #cap = cv2.VideoCapture("http://192.168.18.16:8080/video")
     cap = cv2.VideoCapture(0)
     cap.set(3,590)
     cap.set(4,500)
